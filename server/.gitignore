@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.env
+# database dumps & data
+*.csv
+*.sql
+*.sql.gz
+server/src/database/data/
