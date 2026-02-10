@@ -9,7 +9,7 @@ const {
 const asyncErrorHandler = require('../utils/asyncErrorHandler');
 
 const getQuotes = asyncErrorHandler(async (req, res) => {
-  const { limit = 5, offset = 0, author, text, category } = req.query;
+  const { limit = 10, offset = 0, author, text, category } = req.query;
   const { quotes, total } = await findQuotes({ limit, offset, author, text, category });
   res.json({ quotes, total });
 });
