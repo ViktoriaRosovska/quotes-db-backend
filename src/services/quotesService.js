@@ -22,7 +22,6 @@ const findQuotes = async ({ limit, offset, author, text, category }) => {
   include: category
     ? [{
         model: Category,
-      // as: 'FilterCategories',
          as: 'Categories',
         attributes: [],
         where: { name: category },
@@ -44,8 +43,7 @@ const total = await Quote.count({
   include: category
     ? [{
         model: Category,
-      // as: 'FilterCategories',
-         as: 'Categories',
+        as: 'Categories',
         where: { name: category },
         required: true,
         through: { attributes: [] },
