@@ -15,7 +15,7 @@ const getQuotes = asyncErrorHandler(async (req, res) => {
 });
 
 const getRandomQuotes = asyncErrorHandler(async (req, res) => {
-  const { limit = 3 } = req.query;
+  const { limit = 10 } = req.query;
   const quotes = await findRandomQuotes(limit);
   res.json(quotes);
 });
