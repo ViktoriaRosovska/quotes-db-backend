@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   // Application
-  APP_PORT: process.env.APP_PORT || 4000,
+  APP_PORT: process.env.APP_PORT || 10000,
 
   // Initial data import to the database
   CSV_IMPORT_BATCH_SIZE: process.env.CSV_IMPORT_BATCH_SIZE || 2000,
